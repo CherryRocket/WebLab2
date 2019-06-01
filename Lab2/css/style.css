@@ -29,31 +29,12 @@ h1, h2, h3, h4{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 700px;
+    height: 1300px;
     background: url(../images/header.jpg) top
     no-repeat;  
 }
 .intro::before{
-    content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: -moz-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 1) 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(49%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 1)));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 1) 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 1) 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 1) 100%);
-  /* IE10+ */
-  background: linear-gradient(to top, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 1) 100%);
-  /* W3C */
-  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
-  /* IE6-9 */
+
 }
 
 .intro_inner{
@@ -77,6 +58,14 @@ h1, h2, h3, h4{
     width: 700;
     font-size: 24px;
     color: white;
+}
+
+.intro_block{
+    height: 300px;
+    width: 600px;
+    background-color: white;
+    box-shadow: black;
+    margin-top: 100px;
 }
 
 
