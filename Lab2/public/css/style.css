@@ -397,3 +397,87 @@ h1, h2, h3, h4{
 #icon_mail{
     background: url(../images/Mail.png) no-repeat;
 }
+
+/*content*/
+/*about-us*/
+.About-us{
+    position: relative;
+    width: 100%;
+    height: 1100px;
+}
+.About-us_text{
+    -moz-user-select: none; /* Mozilla Firefox */
+    -ms-user-select: none; /* Internet Explorer (не поддерживается) */
+    -o-user-select: none; /* Opera Presto (не поддерживается) */
+    -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
+    text-align: center;
+    text-transform: uppercase;
+    opacity: .03;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 127px;
+    font-weight: bold;
+    letter-spacing: 6.1px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.About-us_block{
+    position: absolute;
+    top: 105px;
+    width: 100%;
+    height: 640px;
+    background-color: black;
+    background-image: url(../images/AboutUs.jpg);
+}
+.About_us_texblock{
+    position: absolute;
+    left: 0;
+    top: 417px;
+    width: 945px;
+    height: 501px;
+    background-color: white;
+}
+
+.about_toptext{
+    padding-top: 95px;
+    width: 100%;    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    color: #000000;
+}
+.about_x{
+    margin-top: 16px;
+    color: black;
+    text-align: center;
+}
+
+.about_text{
+    margin: 22px auto 0 auto;
+    width: 341px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.73;
+    text-align: left;
+    color: #000000;
+}
+
+.about_more{
+    width: 341px;
+    margin: 22px auto 0 auto;
+}
+
+.more_text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    color: #00b0ff;
+}
+
+.more_line{
+    width: 88px;
+    height: 2px;
+    background-color: #00b0ff;
+}
