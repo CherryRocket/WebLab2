@@ -14,27 +14,32 @@ h1, h2, h3, h4{
 
 /*container*/
 /*1170*/
-.container{
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-}
 
 /*intro*/
 /*1170*/
 .intro{ 
     padding-top: 189px;
     width: 100%;
-    height: 1212px;
-    background: url(../images/header.jpg) top
+    height: 1196px;
+    background: url(../images/intro.jpg) top
     no-repeat;  
+}
+
+.intro_inner{
+    width: 100%;
+    max-width: 1188px;
+    height: 836px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .intro_toptext{
     font-family: 'Playfair Display', serif;
     font-style: italic;
     max-width: 760px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -53,10 +58,21 @@ h1, h2, h3, h4{
     color: white;
 }
 
+.content{
+    position: relative;
+    height: 2288px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Surf*/
+
 .intro_block{
     position: relative;
-    margin: auto;
-    top: 140px;
     height: 596px;
     width: 1028px;
     box-shadow: 0 0 20px .1px black;
@@ -341,7 +357,8 @@ h1, h2, h3, h4{
 /*HEADER*/
 .header{
     padding: 25px;
-    width: 100%;
+    margin: 0 auto;
+    width: 1188px;
     position: absolute;
     top: 0;
     left: 0;
@@ -410,59 +427,75 @@ h1, h2, h3, h4{
 .About-us{
     position: relative;
     width: 100%;
-    height: 1157px;
+    height: 1022px;
 }
 .About-us_text{
-    -moz-user-select: none; /* Mozilla Firefox */
-    -ms-user-select: none; /* Internet Explorer (не поддерживается) */
-    -o-user-select: none; /* Opera Presto (не поддерживается) */
-    -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
+    /*width: 1188px;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    -o-user-select: none; 
+    -webkit-user-select: none; 
     text-align: center;
     text-transform: uppercase;
     opacity: .03;
     font-family: 'Montserrat', sans-serif;
-    font-size: 196px;
+    font-size: 186px;
     font-weight: bold;
     letter-spacing: 14.6px;
     color: black;
-    text-transform: uppercase;
+    text-transform: uppercase;*/
+    width: 1162px;
+    height: 143px;
+    margin: 0 auto;
+    background-image: url(../images/AboutUsText.jpg);
 }
 
 .About-us_block{
     position: absolute;
-    top: 172px;
+    top: 120px;
     width: 100%;
     height: 640px;
     background-color: black;
     background-image: url(../images/AboutUs.jpg);
     box-shadow:0 0 0 360px rgba(0, 0, 0, .2) inset;
 }
-.About_us_textblock{
+
+.About_us_backblock{
     position: absolute;
     left: 0;
-    top: 467px;
+    top: 458px;
     width: 945px;
-    height: 501px;
+    height: 564px;
     background-color: white;
+}
+
+.About_us_textblock{
+    position: absolute;
+    left: 475px;
+    width: 369px;
+    height: 564px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about_toptext{
     padding-top: 95px;
-    width: 100%;    
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     letter-spacing: 2.5px;
-    text-align: center;
-    color: #000000;
+    color: black;
+    text-transform: uppercase;
+    
 }
 .about_x{
-    margin-top: 16px;
     color: black;
-    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 .about_text{
-    margin: 22px auto 0 auto;
+    margin-top: 22px;
     width: 341px;
     font-family: 'Playfair Display', serif;
     font-size: 22px;
@@ -474,7 +507,7 @@ h1, h2, h3, h4{
 
 .about_more{
     width: 341px;
-    margin: 22px auto 0 auto;
+    margin-top: 22px;
 }
 
 .more_text{
@@ -492,11 +525,11 @@ h1, h2, h3, h4{
 }.about_video{
     position: absolute;
     left: 1015px;
-    top: 734px;
+    top: 722px;
     width: 500px;
     height: 300px;
+    box-shadow: 20px 34.6px 50px 0 rgba(0, 0, 0, 0.2);
     background-image: url(../images/Video.jpg);
-    box-shadow:0 0 0 180px rgba(0, 0, 0, .2) inset;
     cursor: pointer;
 }
 
@@ -539,15 +572,16 @@ h1, h2, h3, h4{
 /*Our-team*/
 .Our-team{
     position: relative;
-    width: 100%;
-    height: 586px;
+    width: 1188px;
+    height: 408px;
 }
 
 .team_text{
-    -moz-user-select: none; /* Mozilla Firefox */
-    -ms-user-select: none; /* Internet Explorer (не поддерживается) */
-    -o-user-select: none; /* Opera Presto (не поддерживается) */
-    -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
+    /*
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    -o-user-select: none; 
+    -webkit-user-select: none; 
     text-align: center;
     text-transform: uppercase;
     opacity: .03;
@@ -556,12 +590,16 @@ h1, h2, h3, h4{
     font-weight: bold;
     letter-spacing: 14px;
     color: black;
-    text-transform: uppercase;
+    text-transform: uppercase;*/
+    width: 1159px;
+    height: 138px;
+    margin: 0 auto;
+    background-image: url(../images/OurTeamText.jpg);
 }
 
 .team_blocks{
     position: absolute;
-    top: 145px;
+    top: 100px;
     width: 100%;
     height: 308px;
     display: flex;
@@ -576,11 +614,32 @@ h1, h2, h3, h4{
     box-shadow: 10px 17.3px 50px 0 rgba(0, 0, 0, 0.2);
     background-color: white;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.team_block1:hover, .team_block2:hover, .team_block3:hover,
-.team_block4:hover{
+.content .Our-team .team_blocks > div:hover{
     background-color: #00b0ff;
+}
+
+.content .Our-team .team_blocks > div:hover .name{
+    color: white;
+}
+
+.content .Our-team .team_blocks > div:hover .mail,
+.content .Our-team .team_blocks > div:hover .location > p
+{
+    color: #b3e7ff;
+}
+
+.content .Our-team .team_blocks > div:hover .location > div{
+    background-image: url(../images/PinSelected.png);
+}
+
+.content .Our-team .team_blocks > div:hover .line{
+    background-image: url(../images/LineSelected.png)
 }
 
 .team_block1{
@@ -630,4 +689,192 @@ h1, h2, h3, h4{
     margin: 30px 0 0 0;
     border-radius: 50%;
     border: solid 2px #ffffff;
+}
+
+.block1_picture{
+    background-image: url(../images/Team1.jpg)
+}
+
+.block2_picture{
+    background-image: url(../images/Team2.jpg)
+}
+
+.block3_picture{
+    background-image: url(../images/Team3.jpg)
+}
+
+.block4_picture{
+    background-image: url(../images/Team4.jpg)
+}
+
+.name{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #00b0ff;
+}
+
+.block1_info, .block2_info, .block3_info, .block4_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mail{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #8c8c8c;
+}
+
+.line{
+    width: 31px;
+    height: 6px;
+    color: #646464;
+    background-image: url(../images/Line.png)
+}
+
+.content .Our-team .team_blocks .location{
+    margin-bottom: 45px;
+    display: flex;
+}
+
+.content .Our-team .team_blocks .location > div{
+    width: 10px;
+    height: 13px;
+    background-image: url(../images/Pin.png);
+    margin-right: 5px;
+}
+
+.content .Our-team .team_blocks .location > p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #8c8c8c;
+}
+
+/*Updates*/
+.Updates{
+    position: relative;
+    width: 1188px;
+    height: 516px;
+}
+
+.in{
+    position: relative;
+    width: 1188px;
+    height: 516px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Updates .Topper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Updates .Topper .text{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2.5px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.Updates .Topper .x{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.Updates .blocks{
+    width: 870px;
+    height: 344px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Updates .blocks > div{
+    width: 270px;
+    height: 344px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.Updates .blocks .Photo{
+    width: 270px;
+    height: 203px;
+}
+
+.Updates .blocks .block1 .Photo{
+    background-image: url(../images/Update1.jpg)
+}
+
+.Updates .blocks .block2 .Photo{
+    background-image: url(../images/Update2.jpg)
+}
+
+.Updates .blocks .block3 .Photo{
+    background-image: url(../images/Update3.jpg)
+}
+
+.Updates .blocks p{
+    margin: 13px auto;
+    width: 216px;
+    height: 88px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #787878;
+}
+
+.Updates .blocks > div:hover{
+    box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Updates .blocks > div:hover p{
+    color: #0022ff;
+}
+
+.Updates button{
+    margin-left: 29px;
+    width: 197px;
+    height: 44px;
+    border: none;
+    outline: none;
+    user-select: none;
+    background-color: #00b0ff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.Updates button:hover{
+    background-color: #0099ff;
 }
