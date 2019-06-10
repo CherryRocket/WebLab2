@@ -1,11 +1,46 @@
-body{
-    margin: 0;
+@font-face{
+    font-family: Raleway-Regular;
+    src: url("../fonts/Raleway/Raleway-Regular.ttf")
+}
+
+@font-face{
+    font-family: Raleway-SemiBold;
+    src: url("../fonts/Raleway/Raleway-SemiBold.ttf")
+}
+
+@font-face{
+    font-family: Raleway-Bold;
+    src: url("../fonts/Raleway/Raleway-Bold.ttf")
+}
+
+@font-face{
+    font-family: Montserrat-Regular;
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf")
+}
+
+@font-face{
+    font-family: Montserrat-Bold;
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf")
+}
+
+@font-face{
+    font-family: PlayfairDisplay-Italic;
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Italic.ttf")
+}
+
+@font-face{
+    font-family: RobotoCondensed-Bold;
+    src: url("../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf")
 }
 
 *,*:after,*:before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{
+    margin: 0;
 }
 
 h1, h2, h3, h4{
@@ -20,7 +55,7 @@ h1, h2, h3, h4{
 .intro{ 
     padding-top: 189px;
     width: 100%;
-    height: 1196px;
+    height: 1114px;
     background: url(../images/intro.jpg) top
     no-repeat;  
 }
@@ -37,8 +72,7 @@ h1, h2, h3, h4{
 }
 
 .intro_toptext{
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+    font-family: 'PlayfairDisplay-Italic', serif;
     max-width: 760px;
     text-align: center;
 }
@@ -60,12 +94,12 @@ h1, h2, h3, h4{
 
 .content{
     position: relative;
-    height: 2288px;
+    height: 2420px;
     width: 100%;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -133,8 +167,7 @@ h1, h2, h3, h4{
 }
 .nameboard{
     padding-top: 36px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-family: 'Montserrat-Bold', sans-serif;
     color: black;
     font-size: 20px;
     width: 340px;
@@ -144,41 +177,68 @@ h1, h2, h3, h4{
 }
 
 .rating{
-    margin-top: 10px;
+    width: 140px;
+    margin: 3px 0 0 0;
+    padding: 0;
+    font-size: 0;
     display: flex;
 }
 
-.full_star{
-    flex-basis: auto;
-    margin-right: 3px;
-    width: 14px;
-    height: 14px;
-    background-color: #f2d800;
+.rate {
+    width: 90px;
+    padding: 0;
+    font-size: 0;
+    display: flex;
 }
-.empty_star{
-    width: 14px;
-    height: 14px;
-    border: solid 1px #787878;
-    background-color: #787878;
+.rate:hover .star {
+    color: #f2d800;
+    text-shadow:
+        0 1px #f2d800,
+        0 -1px #f2d800,
+        1px 0 #f2d800,
+        -1px 0 #f2d800;
+}
+.rate .star {
+    margin: 0;
+    padding: .15em;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    text-shadow:
+        0 1px #939393,
+        0 -1px #939393,
+        1px 0 #939393,
+        -1px 0 #939393;
+}
+.rate .star:before {
+    content: '\2605';
+}
+.rate .star:hover ~ .star {
+    color: #fff;
+    text-shadow:
+        0 1px #939393,
+        0 -1px #939393,
+        1px 0 #939393,
+        -1px 0 #939393;
 }
 .rating_amount{
-    margin-left: 6px;
+    margin: 6px 0 0 5px;
     width: 23px;
     height: 12px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bold', sans-serif;
     font-size: 12px;
-    font-weight: bold;
     color: #787878;
 }
+
 .desc_change{
-    margin-top: 39px;
+    margin-top: 35px;
     display: flex;
 }
 
 .desc1{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway-Bold', sans-serif;
     font-size: 14px;
-    font-weight: bold;
     letter-spacing: 0.7px;
     text-align: left;
     color: #000000;
@@ -187,9 +247,8 @@ h1, h2, h3, h4{
 
 .desc{
     margin-left: 28px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway-Bold', sans-serif;
     font-size: 14px;
-    font-weight: bold;
     letter-spacing: 0.7px;
     text-align: left;
     color: #a0a0a0;
@@ -218,7 +277,7 @@ h1, h2, h3, h4{
 .desc_text{
     margin-top: 22px;
     width: 100%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway-Regular', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
@@ -234,9 +293,8 @@ h1, h2, h3, h4{
 }
 
 .buy_text{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bold', sans-serif;
     font-size: 24px;
-    font-weight: bold;
     color: #000000;
 }
 
@@ -250,9 +308,8 @@ h1, h2, h3, h4{
     outline: none;
     user-select: none;
     background-color: #00b0ff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bold', sans-serif;
     font-size: 14px;
-    font-weight: bold;
     letter-spacing: 1.4px;
     color: white;
     transition-duration: 0.4s;
@@ -262,24 +319,25 @@ h1, h2, h3, h4{
     background-color: #0099ff;
 }
 
-.view_all{
+.intro .intro_inner .introblock_information > button{
     margin-top: 82px;
-    height: 20px;
-    width: 100%;
-}
-
-.viewall_text{
-    width: 123px;
-    height: 14px;
-    font-family: 'Montserrat', sans-serif;
+    width: 121px;
+    height: 22px;
+    font-family: 'Montserrat-Regular', sans-serif;
     font-size: 16px;
+    font-weight: 900;
     color: #00b0ff;
+    border: none;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+    background-color: white;
+    cursor: pointer;
 }
 
-.viewall_line{
-    height: 2px;
-    width: 122px;
-    background-color: #00b0ff;
+.intro .intro_inner .introblock_information > button:hover{
+    border-bottom: solid 2px #00b0ff;
 }
 
 .introblock_text{
@@ -293,9 +351,8 @@ h1, h2, h3, h4{
     text-transform: uppercase;
     opacity: .03;
     height: 81px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bold', sans-serif;
     font-size: 127px;
-    font-weight: bold;
     letter-spacing: 6.1px;
     color: black;
     -webkit-transform: rotate(-90deg); 
@@ -348,14 +405,15 @@ h1, h2, h3, h4{
     width: 56px;
     height: 38px;
     background-color: #000000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular', sans-serif;
     font-size: 14px;
+    font-weight: normal;
     letter-spacing: -0.6px;
-    color: #ffffff;
+    color: white;
 }
 
 /*HEADER*/
-.header{
+header{
     padding: 25px;
     margin: 0 auto;
     width: 1188px;
@@ -373,7 +431,7 @@ h1, h2, h3, h4{
 }
 
 .header_logo{
-    font-family: 'Montserrat Black', sans-serif;
+    font-family: 'Montserrat-Bold', sans-serif;
     font-size: 34px;
     font-weight: 700;
     color: black;
@@ -382,13 +440,13 @@ h1, h2, h3, h4{
 /*nav*/
 .nav{
     padding-right: 80px;
-    font-family: 'Montserrat SemiBold', sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
 }
 .nav_link{
     padding: 7px 10px;
     display: inline-block;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
     vertical-align: top;
     margin: 1px;
     color: black;
@@ -427,7 +485,7 @@ h1, h2, h3, h4{
 .About-us{
     position: relative;
     width: 100%;
-    height: 1022px;
+    height: 980px;
 }
 .About-us_text{
     /*width: 1188px;
@@ -438,40 +496,49 @@ h1, h2, h3, h4{
     text-align: center;
     text-transform: uppercase;
     opacity: .03;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bold', sans-serif;
     font-size: 186px;
-    font-weight: bold;
     letter-spacing: 14.6px;
     color: black;
     text-transform: uppercase;*/
     width: 1162px;
     height: 143px;
     margin: 0 auto;
-    background-image: url(../images/AboutUsText.jpg);
+    background: url(../images/AboutUsText.jpg) no-repeat white;
 }
 
-.About-us_block{
+.About-us_backblock{
     position: absolute;
     top: 120px;
     width: 100%;
     height: 640px;
     background-color: black;
-    background-image: url(../images/AboutUs.jpg);
+    background: url(../images/AboutUs.jpg) no-repeat white;
     box-shadow:0 0 0 360px rgba(0, 0, 0, .2) inset;
 }
 
-.About_us_backblock{
+.About_us_whiteblock{
     position: absolute;
-    left: 0;
-    top: 458px;
+    top: 416px;
     width: 945px;
     height: 564px;
     background-color: white;
 }
 
+.content .About-us .block{
+    position: relative;
+    top: 273px;
+    height: 564px;
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .About_us_textblock{
-    position: absolute;
-    left: 475px;
+    position: relative;
+    margin-left: 94px;
     width: 369px;
     height: 564px;
     display: flex;
@@ -481,8 +548,9 @@ h1, h2, h3, h4{
 
 .about_toptext{
     padding-top: 95px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular', sans-serif;
     font-size: 18px;
+    font-weight: 900;
     letter-spacing: 2.5px;
     color: black;
     text-transform: uppercase;
@@ -497,35 +565,38 @@ h1, h2, h3, h4{
 .about_text{
     margin-top: 22px;
     width: 341px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'PlayfairDisplay-Italic', serif;
     font-size: 22px;
-    font-style: italic;
     line-height: 1.73;
     text-align: left;
     color: #000000;
 }
 
-.about_more{
-    width: 341px;
-    margin-top: 22px;
-}
-
-.more_text{
-    font-family: 'Montserrat', sans-serif;
+.content .About-us .block .About_us_textblock > button{
+    align-self: flex-start;
+    margin: 22px 0 0 12px;
+    width: 90px;
+    height: 23px;
+    font-family: 'Montserrat-Regular', sans-serif;
     font-size: 16px;
+    font-weight: 900;
     text-align: left;
     color: #00b0ff;
+    border: none;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    user-select: none;
+    background-color: white;
+    cursor: pointer;
 }
 
-.more_line{
-    width: 88px;
-    height: 2px;
-    background-color: #00b0ff;
+.content .About-us .block .About_us_textblock > button:hover{
+    border-bottom: solid 2px #00b0ff;
+}
 
-}.about_video{
-    position: absolute;
-    left: 1015px;
-    top: 722px;
+.about_video{
+    margin: 264px 22px 0 0;
     width: 500px;
     height: 300px;
     box-shadow: 20px 34.6px 50px 0 rgba(0, 0, 0, 0.2);
@@ -585,16 +656,15 @@ h1, h2, h3, h4{
     text-align: center;
     text-transform: uppercase;
     opacity: .03;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bold', sans-serif;
     font-size: 190px;
-    font-weight: bold;
     letter-spacing: 14px;
     color: black;
     text-transform: uppercase;*/
     width: 1159px;
     height: 138px;
     margin: 0 auto;
-    background-image: url(../images/OurTeamText.jpg);
+    background: url(../images/OurTeamText.jpg) no-repeat white;
 }
 
 .team_blocks{
@@ -669,6 +739,7 @@ h1, h2, h3, h4{
     width: 51px;
     height: 50px;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.16);
+    user-select: none;
     border: none;
     outline: none;
     cursor: pointer;
@@ -688,7 +759,7 @@ h1, h2, h3, h4{
     height: 100px;
     margin: 30px 0 0 0;
     border-radius: 50%;
-    border: solid 2px #ffffff;
+    border: solid 2px white;
 }
 
 .block1_picture{
@@ -708,10 +779,9 @@ h1, h2, h3, h4{
 }
 
 .name{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular', sans-serif;
     font-size: 18px;
-    font-weight: normal;
-    font-style: normal;
+    font-weight: 900;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
@@ -725,10 +795,9 @@ h1, h2, h3, h4{
 }
 
 .mail{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway-Regular', sans-serif;
     font-size: 14px;
     font-weight: normal;
-    font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
@@ -755,10 +824,9 @@ h1, h2, h3, h4{
 }
 
 .content .Our-team .team_blocks .location > p{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway-Regular', sans-serif;
     font-size: 14px;
     font-weight: normal;
-    font-style: normal;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
@@ -790,8 +858,9 @@ h1, h2, h3, h4{
 }
 
 .Updates .Topper .text{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Regular', sans-serif;
     font-size: 18px;
+    font-weight: 900;
     letter-spacing: 2.5px;
     color: black;
     text-transform: uppercase;
@@ -838,10 +907,9 @@ h1, h2, h3, h4{
     margin: 13px auto;
     width: 216px;
     height: 88px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway-Regular', sans-serif;
     font-size: 16px;
     font-weight: normal;
-    font-style: normal;
     font-stretch: normal;
     line-height: 1.5;
     letter-spacing: normal;
@@ -867,9 +935,8 @@ h1, h2, h3, h4{
     background-color: #00b0ff;
     cursor: pointer;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat-Bold', sans-serif;
     font-size: 14px;
-    font-weight: bold;
     letter-spacing: 1.4px;
     color: white;
     transition-duration: 0.4s;
@@ -877,4 +944,458 @@ h1, h2, h3, h4{
 
 .Updates button:hover{
     background-color: #0099ff;
+}
+
+/*footer*/
+footer{
+    position: relative;
+    height: 1035px;
+    width: 100%;
+    background-color: white;
+}
+
+footer .back{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 420px;
+    background-color: black;
+}
+
+footer > .Block{
+    position: relative;
+    top: 90px;
+    margin: 0 auto;
+    width: 1188px;
+    height: 941px;
+}
+
+footer .Block > .Instagram{
+    position: absolute;
+    width: 620px;
+    height: 746px;
+    background: url(../images/InstagramText.jpg) no-repeat white;
+}
+
+footer .Block .Instagram .Block_photo{
+    padding-top: 56px;
+    width: 620px;
+    height: 676px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .Block .Instagram .Block_photo > div{
+    width: 310px;
+    height: 310px;
+}
+
+footer .Block .Instagram .Block_photo .Photo1{
+    background: url(../images/InstPhoto1.jpg) no-repeat white;
+}
+
+footer .Block .Instagram .Block_photo .Photo2{
+    background: url(../images/InstPhoto2.jpg) no-repeat white;
+}
+
+footer .Block .Instagram .Block_photo .Photo3{
+    background: url(../images/InstPhoto3.jpg) no-repeat white;
+}
+
+footer .Block .Instagram .Block_photo .Photo4{
+    background: url(../images/InstPhoto4.jpg) no-repeat white;
+}
+
+footer .Block .Instagram .Bar{
+    width: 620px;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+footer .Block .Instagram .Bar > .Icon{
+    width: 30px;
+    height: 30px;
+    background: url(../images/Instagram2.png) no-repeat white;
+}
+
+footer .Block .Instagram .Bar .Text{
+    font-family: "RobotoCondensed-Bold", sans-serif;
+    font-size: 24px;
+    font-stretch: condensed;
+    text-transform: uppercase;
+    color: #00b0ff;
+}
+
+footer .Block .Instagram .Bar .Mail{
+    font-family: "Raleway-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+footer .Block > .Instagram .Bar .Icon, .Text, .Mail{
+    margin-left: 20px;
+}
+
+footer .Block > .Facebook{
+    position: absolute;
+    top: 114px;
+    right: 78px;
+    width: 440px;
+    height: 348px;
+    background: url(../images/FacebookBack.jpg) no-repeat white;
+}
+
+footer .Block .Facebook > .Block{
+    margin: 94px auto auto auto;
+    width: 339px;
+    height: 214px;
+    background-color: #f6f7f9;
+}
+
+footer .Block .Facebook .Block .Container_photo{
+    position: relative;
+    width: 340px;
+    height: 130px;
+    background: url(../images/FacebookPhoto.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .Container_photo .Srfrs_photo{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 54px;
+    height: 54px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.38);
+    border: solid 2px white;
+    background-color: #00b0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .Block .Facebook .Block .Container_photo .Srfrs_photo > p{
+    font-family: "Montserrat-Bold", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    user-select: none;
+}
+
+footer .Block .Facebook .Block .Container_photo .Srfrs{
+    position: absolute;
+    left: 68px;
+    top: 11px;
+    text-shadow: 1px 1.7px 6px rgba(0, 0, 0, 0.62);
+    font-family: Helvetica;
+    font-size: 18px;
+    color: white;
+}
+
+footer .Block .Facebook .Block .Container_photo .Likes{
+    position: absolute;
+    left: 68px;
+    top: 31px;
+    text-shadow: 1px 1.7px 6px rgba(0, 0, 0, 0.62);
+    font-family: Helvetica;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    color: white;
+}
+
+footer .Block .Facebook .Block .Container_photo > button{
+    position: absolute;
+    bottom: 9px;
+    height: 22px;
+    border: none;
+    outline: none;
+    user-select: none;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.45);
+    background-color: #f6f7f9;
+    cursor: pointer;
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #4b4f56;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .Block .Facebook .Block .Container_photo .But1{
+    left: 9px;
+    width: 92px;
+}
+
+footer .Block .Facebook .Block .Container_photo .But2{
+    right: 9px;
+    width: 66px;
+}
+
+footer .Block .Facebook .Block .Container_photo .But1 .Icon{
+    width: 12px;
+    height: 12px;
+    background: url(../images/Facebook2.jpg) no-repeat #f6f7f9;
+}
+
+footer .Block .Facebook .Block .Container_photo .But2 .Icon{
+    width: 11px;
+    height: 11px;
+    background: url(../images/Share.jpg) no-repeat #f6f7f9;
+}
+
+footer .Block .Facebook .Block .Container_photo > button:hover{
+    color: #00b0ff;
+}
+
+footer .Block .Facebook .Block .People{
+    width: 340px;
+    height: 85px;
+    border: solid 1px #e9ebee;
+    background-color: #f6f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .Block .Facebook .Block .People .Block{
+    width: 322px;
+    height: 67px;
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.13);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+footer .Block .Facebook .Block .People .Block > p{
+    margin-left: 8px;
+    font-family: Helvetica;
+    font-size: 12px;
+    color: #4b4f56;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos{
+    margin-left: 8px;
+    width: 302px;
+    height: 32px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos > div{
+    width: 32px;
+    height: 32px;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo1{
+    background: url(../images/FbPeople1.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo2{
+    background: url(../images/FbPeople2.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo3{
+    background: url(../images/FbPeople3.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo4{
+    background: url(../images/FbPeople4.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo5{
+    background: url(../images/FbPeople5.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo6{
+    background: url(../images/FbPeople6.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo7{
+    background: url(../images/FbPeople7.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo8{
+    background: url(../images/FbPeople8.jpg) no-repeat white;
+}
+
+footer .Block .Facebook .Block .People .Block .Photos .Photo9{
+    background: url(../images/FbPeople9.jpg) no-repeat white;
+}
+
+footer .Block .Links{
+    position: absolute;
+    bottom: 254px;
+    right: 200px;
+    width: 318px;
+    height: 124px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .Block .Links > div{
+    width: 150px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer .Block .Links div{
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+
+footer .Block .Links > .Block1 > div > div{
+    width: 19px;
+    height: 6px;
+    background: url(../images/WaveYellow.png) no-repeat;
+}
+
+footer .Block .Links > .Block1 > div > p{
+    margin-left: 6px;
+    font-family: "Raleway-Regular", sans-serif;
+    font-size: 14px;
+    color: white;
+    user-select: none;
+}
+
+footer .Block .Links > .Block2 > div > div{
+    width: 19px;
+    height: 6px;
+    background: url(../images/WaveYellow.png) no-repeat;
+}
+
+footer .Block .Links > .Block2 > div > p{
+    margin-left: 6px;
+    font-family: "Raleway-Regular", sans-serif;
+    font-size: 14px;
+    color: white;
+    user-select: none;
+}
+
+footer .Block .Links > .Block1 > div{
+    cursor: pointer;
+}
+
+footer .Block .Links > .Block2 > div{
+    cursor: pointer;
+}
+
+footer .Block .Links > .Block1 > div:hover > p{
+    color: #fcd900;
+}
+
+footer .Block .Links > .Block2 > div:hover > p{
+    color: #fcd900;
+}
+
+footer .Info{
+    position: absolute;
+    left: 0;
+    bottom: 154px;
+    width: 248px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+footer .Info > p{
+    font-family: "Raleway-SemiBold", sans-serif;
+    font-size: 12px;
+    color: #4d4d4d;
+}
+
+footer .Info > div{
+    width: 5px;
+    height: 5px;
+    background-color: #4d4d4d;
+    border-radius: 50%;
+}
+
+footer .Subscribe{
+    position: absolute;
+    bottom: 70px;
+    right: 218px;
+    width: 300px;
+    height: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .Subscribe > p{
+    font-family: "Montserrat-Regular";
+    line-height: 14px;
+    font-size: 16px;
+    color: white;
+}
+
+footer .Subscribe .Enter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .Subscribe .Enter .Icon{
+    width: 16px;
+    height: 11px;
+    background: url(../images/SubMail.png) no-repeat;
+}
+
+footer .Subscribe .Enter .lol{
+    position: absolute;
+    bottom: 9px;
+    left: 26px;
+    font-family: "Raleway-SemiBold", sans-serif;
+    font-size: 14px;
+    user-select: none;
+    color: #4d4d4d;
+}
+
+footer .Subscribe .Enter > input{
+    width: 242px;
+    font-family: "Raleway-SemiBold", sans-serif;
+    font-size: 14px;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: #4d4d4d;
+}
+
+footer .Subscribe .Enter > button{
+    width: 22px;
+    height: 22px;
+    background-color: #00b0ff;
+    font-size: 15px;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+footer .Subscribe .Enter > button:hover{
+    background-color: #0099ff;
+}
+
+footer .Subscribe .UnderLine{
+    margin-top: 5px;
+    width: 300px;
+    height: 1px;
+    background-color: #4d4d4d;
 }
